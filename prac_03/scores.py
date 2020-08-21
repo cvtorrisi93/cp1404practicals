@@ -11,12 +11,14 @@ MAX_SCORE = 100
 
 def main():
 
+    output_file = open("results.txt", 'w')
+
     number_of_scores = get_valid_integer("Enter a number of scores to generate: ")
 
     for i in range(number_of_scores):
         score = get_random_score()
         result = determine_score(score)
-        print("{:<2} is {}".format(score, result))
+        print("{} is {}".format(score, result), file=output_file)
 
 
 def get_random_score():
