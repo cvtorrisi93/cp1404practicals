@@ -3,27 +3,33 @@ CP1404/CP5632 Practical - Christian Torrisi
 Data file -> lists program
 """
 
+import csv
+
 FILENAME = "subject_data.txt"
 
 
 def main():
     data = get_data()
-    print(data)
+
+    # NOTE: function in assignment can be used for formatting length of "columns"
+    for subject in data:
+        print("{} is taught by {:12} and has {:3} students".format(subject[0], subject[1], subject[2]))
 
 
 def get_data():
     """Read data from file formatted like: subject,lecturer,number of students."""
-    input_file = open(FILENAME)
-    for line in input_file:
-        print(line)  # See what a line looks like
-        print(repr(line))  # See what a line really looks like
-        line = line.strip()  # Remove the \n
-        parts = line.split(',')  # Separate the data into its parts
-        print(parts)  # See what the parts look like (notice the integer is a string)
-        parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
-        print(parts)  # See if that worked
-        print("----------")
+    subject_data = []
+    with open(FILENAME) as input_file:
+        data = csv.reader(input_file, delimiter=',')
+        # For each row in the csv, store it as a list inside a list and
+        # change the string value of number of students to an integer
+        for row in data:
+            row[2] = int(row[2])
+            subject_data.append(row)
+
     input_file.close()
+
+    return subject_data
 
 
 main()
