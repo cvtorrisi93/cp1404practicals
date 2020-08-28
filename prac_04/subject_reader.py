@@ -9,9 +9,10 @@ FILENAME = "subject_data.txt"
 
 
 def main():
+    """Get data from csv file and display with appropriate formatting"""
     data = get_data()
 
-    # NOTE: function in assignment can be used for formatting length of "columns"
+    # NOTE TO SELF: function in assignment can be used for formatting length of "columns"
     for subject in data:
         print("{} is taught by {:12} and has {:3} students".format(subject[0], subject[1], subject[2]))
 
