@@ -26,7 +26,7 @@ def main():
 
 
 def get_code_max_length():
-    states_short = [state_short for state_short in CODE_TO_NAME]
+    states_short = list(CODE_TO_NAME.keys())
     max_length = len(max(states_short, key=len))
     return max_length
 
