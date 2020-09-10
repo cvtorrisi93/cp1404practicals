@@ -4,6 +4,7 @@ Do-from-Scratch - Guitars!.
 """
 
 CURRENT_YEAR = 2020
+VINTAGE_THRESHOLD = 50
 
 
 class Guitar:
@@ -28,4 +29,5 @@ class Guitar:
         return CURRENT_YEAR - self.year
 
     def is_vintage(self):
-        return self.get_age() >= 50
+        """Checks if the Guitar is vintage"""
+        return self.get_age() >= VINTAGE_THRESHOLD

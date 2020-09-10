@@ -29,3 +29,4 @@ class ProgrammingLanguage:
     def is_dynamic(self):
         """Check if the ProgrammingLanguage instance has dynamic typing"""
         return self.typing == "Dynamic"
+
