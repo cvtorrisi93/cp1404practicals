@@ -20,8 +20,8 @@ class Guitar:
         self.cost = cost
 
     def __str__(self):
-        """ """
-        print("{} ({}) : ${:.2f}".format(self.name, self.year, self.cost))
+        """Returns a string output for the Guitar object"""
+        return "{} ({}) : ${:.2f}".format(self.name, self.year, self.cost)
 
     def get_age(self):
         """Gets the age of the guitar from the current year"""
