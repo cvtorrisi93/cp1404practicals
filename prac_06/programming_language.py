@@ -28,8 +28,5 @@ class ProgrammingLanguage:
 
     def is_dynamic(self):
         """Check if the ProgrammingLanguage instance has dynamic typing"""
-        is_dynamic = False
-        if self.typing == "Dynamic":
-            is_dynamic = True
+        return self.typing == "Dynamic"
 
-        return is_dynamic
