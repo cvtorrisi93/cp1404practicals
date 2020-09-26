@@ -7,17 +7,26 @@ BoxLayout:
         orientation: 'horizontal'
         TextInput:
             id: input_number
+            size_hint: 1, 1
             text: '34'
             font_size: 24
             multiline: False
+            on_text: app.handle_conversion(input_number.text)
         BoxLayout:
             orientation: 'vertical'
+            size_hint_x: None
+            width: 60
             Button:
                 text: 'Up'
+                on_press: app.handle_increment(1)
             Button:
                 text: 'Down'
-    Button:
-        text: 'Convert Miles to Kilometres'
+                on_press: app.handle_increment(-1)
+
+#    Button:
+#        text: 'Convert Miles to Kilometres'
+#        on_press: app.handle_conversion(input_number.text)
     Label:
         id: output_label
         font_size: 30
+        text: app.output_message
