@@ -5,7 +5,7 @@ Walkthrough - Test Taxi
 
 from prac_08.taxi import Taxi
 
-prius_01 = Taxi("Prius 1", 100, 1.23)
+prius_01 = Taxi("Prius 1", 100)
 
 prius_01.drive(40)
 
