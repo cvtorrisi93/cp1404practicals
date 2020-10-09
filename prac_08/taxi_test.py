@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 Practical - Christian Torrisi
-Walkthrough - Test Taxi
+Walkthrough - Taxi testing
 """
 
 from prac_08.taxi import Taxi

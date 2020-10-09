@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 Practical - Christian Torrisi
-Intermediate - Taxi class
+Intermediate - Unreliable Car testing
 """
 
 from prac_08.unreliable_car import UnreliableCar

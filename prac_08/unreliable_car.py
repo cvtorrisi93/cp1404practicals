@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 Practical - Christian Torrisi
-Intermediate - Taxi class
+Intermediate - Unreliable Car class
 """
 
 from random import randint
