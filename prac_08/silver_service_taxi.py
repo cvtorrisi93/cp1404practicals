@@ -22,6 +22,6 @@ class SilverServiceTaxi(Taxi):
 
     def get_fare(self):
         """Return the price for the Silver Service Taxi trip."""
-        return (self.price_per_km * self.current_fare_distance) + self.flagfall
+        # return (self.price_per_km * self.current_fare_distance) + self.flagfall
         # More efficient solution below
-        # return self.flagfall + super().getFare()
+        return self.flagfall + super().get_fare()

@@ -5,7 +5,7 @@ Intermediate - Silver Service Taxi (SST) testing
 
 from prac_08.silver_service_taxi import SilverServiceTaxi
 
-hummer = SilverServiceTaxi("Hummer", 200, 4)
-hummer.drive(123)
+hummer = SilverServiceTaxi("Hummer", 200, 2)
+hummer.drive(18)
 print(hummer)
-print("$", hummer.get_fare())
+print("${:.2f}".format(hummer.get_fare()))
