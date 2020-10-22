@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 Practical - Christian Torrisi
-Walkthrough Exercise - Demos of various os module examples
+Intermediate Exercise - Cleanup Files
 """
 import shutil
 import os
