@@ -3,7 +3,6 @@ CP1404/CP5632 Practical - Christian Torrisi
 Intermediate Exercise - Cleanup Files
 """
 
-import shutil
 import os
 
 
@@ -25,14 +24,13 @@ def get_fixed_filename(filename):
     for character in filename:
         if (character.isupper() or character == "(") and previous_character.isalpha():
             new_name += "_" + character
-        elif (character.islower() and previous_character == " ") or previous_character =="(":
+        elif (character.islower() and previous_character == " ") or previous_character == "(":
             new_name += character.upper()
         else:
             new_name += character
         previous_character = character
 
     return new_name.replace(" ", "_").replace(".T_X_T", ".txt")
-
 
 
 main()
